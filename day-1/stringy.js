@@ -186,7 +186,7 @@ return args.join('');
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 //if (stringOne.length > stringTwo.length)
-
+return stringOne.length > stringTwo.length ? stringOne : stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -197,11 +197,22 @@ function longest(stringOne, stringTwo) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
+ * 
+ * I: Two strings
+ * O: Returns 1 if the string is higher in alphabetical order than the second string or Returns 0 if they are equal
+ * C:  line 199
+ * E: n/a
  */
 
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+if (stringOne < stringTwo) {
+    return 1;
+} if (stringOne > stringTwo) {
+    return -1;
+} if (stringOne === stringTwo) {
+    return 0;
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -212,11 +223,20 @@ function sortAscending(stringOne, stringTwo) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
+ * 
+ * 
+ * Same concept as previous question
  */
 
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+if (stringOne > stringTwo) {
+    return 1;
+} if (stringOne < stringTwo) {
+    return -1;
+} if (stringOne === stringTwo) {
+    return 0;
+}
 
 
 
