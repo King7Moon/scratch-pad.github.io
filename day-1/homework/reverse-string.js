@@ -19,14 +19,25 @@
  *  d. how do you concatenate Strings? What operator do we use?
  */
 
+/**
+ * I: A string value will be passed as a parameter
+ * O: Function shouldf return string in reverse
+ * C: I will need a for loop
+ * E: read line 18 and 19
+ */
+
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
+   let reverse = '';
+   for (let i = input.length - 1; i >= 0; i--) {
+    reverse += input[i];
+   }
+    return reverse
     
     
     // YOUR CODE GOES ABOVE HERE //
 }
+
 
 
 
