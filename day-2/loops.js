@@ -38,10 +38,16 @@ function printArrayValuesInReverse(array) {
 
 /** 
  * Given an input Object, return an Array containing the Object keys.
+ * 
+ * I: an object is our input
+ * O: our Output is an array containing Obj Keys
+ * C: N/A we would use the return command
+ * E: N/A
+ * It is difficult to place psuedocode here cause I do not want to mess up the tests. We use the Object.keys method to return all keys. and since this is a function that is meant to be reused, we are not going to know whats in the object. so thats why we use this method
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  return Object.keys(object);
 
   // YOUR CODE ABOVE HERE //
 }
@@ -52,7 +58,10 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
-  
+  let keys = Object.keys(object);   // set a var to the grab keys method. object is our imaginary input 
+  for (let i = 0; i < keys.length; i++){ // loop over the keys, again we do not know how many keys are in a given imaginary object
+    console.log(keys[i]); // 
+  }
   
   
   
