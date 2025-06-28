@@ -70,10 +70,16 @@ function printObjectKeys(object) {
 
 /** 
  * Given an input Object, return an Array containing the Object's values.
+ * 
+ * I: our input is a random object
+ * O: return an array containing the obj's vals
+ * C: There no specific instructions but I know I will need a method
+ * E: We are only looking for the obj's vals, not keys
  */
+
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
+  return Object.values(object);
   
   
   
@@ -83,11 +89,19 @@ function getObjectValues(object) {
 /** 
  * Given an input Object, loop over the Object and print its values 
  * using console.log().
+ * 
+ * I: random object is our input
+ * O: print all of the values 
+ * C: we will use a for loop 
+ * E: We have to make sure we are setting a variable to attach to our object.values method. 
  */
+
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+    let powpow = Object.values(object);
+  for (let i = 0; i < powpow.length; i++) {
+    console.log(powpow[i]);
+  }
   
   
   // YOUR CODE ABOVE HERE //
@@ -95,11 +109,17 @@ function printObjectValues(object) {
 
 /** 
  * Given an input Object, return the number of key/value pairs stored within that Object.
+ * I- an random object is our input
+ * O- return the NUMBER of key/value pairs stored 
+ * C- sounds like a new method to use
+ * E
  */
+
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  return Object.keys(object).length;
+  // I tried doing object length and thats not a method according to Mozzilla. 
+  //I tried diff combos of keys.length and obj.keys && obj.length 
   
   
   // YOUR CODE ABOVE HERE //
@@ -108,10 +128,19 @@ function getObjectLength(object) {
 /** 
  * Given an input Object, how might we loop over the Object IN REVERSE and 
  * print its values using console.log()?
+ * 
+ * I- random obj
+ * O- print obj values in reverse
+ * C- reverse ; remember length -1 tells us the last in an index even if we do not know how many 
+ * E- N/A
+ *
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
+  let nanaBanana = Object.values(object);
+  for (let i = nanaBanana.length -1; i > -1; i--) {
+    console.log(nanaBanana[i]);
+  }
   
   
   
