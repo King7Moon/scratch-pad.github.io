@@ -29,13 +29,26 @@
  *   
  *   b. Does the last threshold even need an else-if?
  * 
- *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
- *      the exact case.
+ *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with     the exact case.
+ * 
+ * I: integers 
+ * O: Greeting
+ * C: Specific integers output specific phrases
+ * E needs both statements to be true, use &&
  */
+
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
+    if (hour >= 0 && hour <= 11) {
+        console.log('Good Morning!');
+    } else if (hour >= 12 && hour <= 16) {
+        console.log('Good Afternoon!')
+    } else if (hour >= 17 && hour <= 21) {
+        console.log('Good Evening!')
+    } else {
+        console.log('Good Night!');
+    }
     
     
     
