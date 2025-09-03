@@ -133,7 +133,7 @@ return stringOne + stringTwo;
 function join(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
   var args = Array.from(arguments);
-
+return args.join("");
   // YOUR CODE ABOVE HERE //
 }
 
@@ -145,10 +145,19 @@ function join(stringOne, stringTwo) {
  *      longest("ben", "maggie");   //-> "maggie"
  *
  * TIP: What property of the String do we need to compare?
+ * I: Two random strings
+ * O: returns the longest string
+ * C: we need to compare the length of the strings
+ * E
  */
+
 function longest(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+if (stringOne.length > stringTwo.length) {
+  return stringOne;
+} else {
+  return stringTwo;
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -158,10 +167,23 @@ function longest(stringOne, stringTwo) {
  * first, and return 0 if they're equal.
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
+ * 
+ * I: two random strings
+ * O: returns "1" or "-1" or "0"
+ * C: compares each letter to each other then moves on if it has to
+ * E:
  */
+
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE BELOW HERE //
-
+if (stringOne < stringTwo) {
+  return 1;
+} else if (stringOne > stringTwo) {
+  return -1;
+} else {
+  return 0;
+}
+  
   // YOUR CODE ABOVE HERE //
 }
 
