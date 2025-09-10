@@ -53,10 +53,7 @@ function isObject(value) {
       return false;
     }
   // YOUR CODE BELOW HERE //
-  //return (typeof value === "object" &&
-   //  value !== null && 
-   //   !Array.isArray(value) && 
-    //    !(value instanceof Date));
+  
   // YOUR CODE ABOVE HERE //
 }
 
@@ -86,6 +83,13 @@ if (Array.isArray(value) || typeof value === 'object'){
   // YOUR CODE ABOVE HERE //
 }
 
+
+
+
+
+
+
+
 /**
  * Given an input value, return the type of the value as a String
  *
@@ -104,10 +108,25 @@ if (Array.isArray(value) || typeof value === 'object'){
  *    typeOf(134) -> "number"
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
+ * 
+ * I: a random value, can b anything
+ * O: returns the type of value as a string
+ * C: This only works on primitve values
+ * E: Create rules for rejecting complex values?
  */
 function typeOf(value) {
   // YOUR CODE BELOW HERE //
-  return typeof(value);
+if (value === null){
+  return "null";
+} else 
+if (Array.isArray(value)){
+  return "array";
+} else 
+if (value instanceof Date){
+  return "date";
+} else {
+  return typeof value;
+}
   // YOUR CODE ABOVE HERE //
 }
 
