@@ -36,12 +36,36 @@ return false;}
  * isObject({ a: 1, b: 2 }); // true
  * isObject([1, 2, 3]); // false
  * 
+ * 
+ * 
+ * I: a rando value
+ * O: returns true if its a collection, false otherwise
+ * C: rejects null, arrays, and dates
+ * E: /\ must be returned as false
  */
 function isObject(value) {
+  if (value === null || Array.isArray(value) || value instanceof Date){
+    return false;
+  } else
+    if (typeof value === 'object'){
+      return true;
+    } else {
+      return false;
+    }
   // YOUR CODE BELOW HERE //
-  
+  //return (typeof value === "object" &&
+   //  value !== null && 
+   //   !Array.isArray(value) && 
+    //    !(value instanceof Date));
   // YOUR CODE ABOVE HERE //
 }
+
+
+
+
+
+
+
 
 /**
  * Given an input value, return true if is either an Array or an an Object
@@ -51,7 +75,14 @@ function isObject(value) {
  */
 function isCollection(value) {
   // YOUR CODE BELOW HERE //
-
+if (value === null || value instanceof Date){
+  return false; 
+} else 
+if (Array.isArray(value) || typeof value === 'object'){
+  return true;
+} else {
+  return false;
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -76,7 +107,7 @@ function isCollection(value) {
  */
 function typeOf(value) {
   // YOUR CODE BELOW HERE //
-  
+  return typeof(value);
   // YOUR CODE ABOVE HERE //
 }
 
