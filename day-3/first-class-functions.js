@@ -33,8 +33,8 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
   // YOUR CODE BELOW HERE //
-  return function (value){
-    return value < base;
+  return function (value){ //naming the function here does not really matter unless you would like to call it outside of this higher function
+    return value < base; // anon function example!!!
   }
   // YOUR CODE ABOVE HERE //
 }
@@ -45,10 +45,20 @@ function createLessThanFilter(base) {
  * character.
  *
  * This function needs to be case insensitive.
+ * 
+ * 
+ * I: A single character
+ * O: A func that tells if first letter of string matches single char
+ * C: function needs to be case insensitive.
+ * E: /\ possibly regex or to.UpperCase() or lower. we do not want empty strings
  */
 function createStartsWithFilter(startsWith) {
   // YOUR CODE BELOW HERE //
-
+return function (string){ // return anon func with string as param
+  return string.length > 0 && string[0].toLowerCase() // returns a non empty string to lowercase
+  // and grabs the first letter also converting it then compares them A == APPLE 
+  === startsWith.toLowerCase();
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -61,7 +71,11 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
   // YOUR CODE BELOW HERE //
-
+return function (string) {
+  return string.length > 0 // 0 represents empty strings
+  && string[string.length - 1].toLowerCase() // the last string
+  === endsWith.toLowerCase();
+}
   // YOUR CODE ABOVE HERE //
 }
 
