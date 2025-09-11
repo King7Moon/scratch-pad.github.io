@@ -93,10 +93,19 @@ return function (string) {
  * 
  *    modifyString(['a', 'b'], function(str){ return str + "!" });
  *    // returns => ['a!', 'b!']
+ * 
+ * I: An array of strings & function modifies strings
+ * O: return the array of strings modified
+ * C: Will need a loop and a place to store array
+ * E: It does not say what the modify function does...
  */
 function modifyStrings(strings, modify) {
   // YOUR CODE BELOW HERE //
-
+var storeMe = [];
+for (let i = 0; i < strings.length; i++){
+  var mods = modify(strings[i]);
+  storeMe.push(mods);
+} return storeMe;
   // YOUR CODE ABOVE HERE //
 }
 
