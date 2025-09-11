@@ -126,11 +126,27 @@ for (let i = 0; i < strings.length; i++){
  * 
  *    allStringsPass(['a', 'bb', 'c'], function(str) { return string.length === 1 });
  *    // returns => false
+ * 
+ * I: rando array of strgs & func meant to test strngs
+ * O: Returns a Boolean and true if ALL strings pass
+ * C: Read the TIP
+ * E:
+ * 
  */
 
 
 function allStringsPass(strings, test) {
   // YOUR CODE BELOW HERE //
+// insert a loop to iterate over the strings
+for (let i = 0; i < strings.length; i++){
+  let stringi = strings[i];
+  if (!test(stringi)) {
+    return false;
+  }
+}
+return true;
+// pass it to the test
+
 
   // YOUR CODE ABOVE HERE //
 }
