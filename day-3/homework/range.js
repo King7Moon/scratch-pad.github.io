@@ -33,24 +33,22 @@
  * if the number is greater than the second num return the array backwards
  * else if return the 
  */
-function range(start, end) {
+function range(start, end){ 
     // YOUR CODE GOES BELOW HERE //
-    let output = []; 
-    if (start < end) {
-        for (let i = start; i <= end; i++)
-   output.push(i);      
- } else if (start > end) {
-    for (let i = start; i >= end; i--) {
-        output.push(i);
- } else {
-    output.push(start);
- }
-    return output;
-    
-    
+ var array = []; //array for empty things
+
+ if (start < end){
+    for (var i = start; i <= end; i++){
+        array.push(i);
+    }
+} else {
+    for (var i = start; i >= end; i--){
+        array.push(i);
+}   
     // YOUR CODE GOES ABOVE HERE //
 }
-
+return array;
+}
 
 
 
