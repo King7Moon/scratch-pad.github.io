@@ -110,7 +110,7 @@ if (Array.isArray(value) || typeof value === 'object'){
  *    typeOf([1,2,3]) -> "array"
  * 
  * I: a random value, can b anything
- * O: returns the type of value as a string
+ * O: returns the type of value as a string OMG
  * C: This only works on primitve values
  * E: Create rules for rejecting complex values?
  */
